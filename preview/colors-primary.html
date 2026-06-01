@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SuperBenefit — Primary Colors</title>
+  <link rel="icon" href="../assets/sb-icon.jpg" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../colors_and_type.css" />
+  <style>
+    body {
+      padding: var(--space-xl);
+      background: var(--bg);
+    }
+    .page-title {
+      font-family: var(--font-serif);
+      font-size: var(--text-2xl);
+      margin-bottom: var(--space-sm);
+      color: var(--fg);
+    }
+    .source-note {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: var(--text-xs);
+      color: var(--muted);
+      margin-bottom: var(--space-xl);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: var(--space-lg);
+    }
+    .swatch {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      background: var(--surface);
+    }
+    .swatch-color {
+      height: 120px;
+      position: relative;
+    }
+    .swatch-info {
+      padding: var(--space-md);
+    }
+    .swatch-name {
+      font-family: var(--font-sans);
+      font-size: var(--text-sm);
+      font-weight: 600;
+      color: var(--fg);
+      margin-bottom: var(--space-xs);
+    }
+    .swatch-hex {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: var(--text-xs);
+      color: var(--muted);
+    }
+    .swatch-token {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: var(--text-xs);
+      color: var(--muted);
+      margin-top: var(--space-xs);
+    }
+
+    /* Brand colors */
+    .c-cream       { background: var(--color-cream); }
+    .c-cream-light { background: var(--color-cream-light); }
+    .c-charcoal    { background: var(--color-charcoal); }
+    .c-black       { background: var(--color-black); }
+    .c-orange      { background: var(--color-orange); }
+    .c-orange-dark { background: var(--color-orange-dark); }
+    .c-red         { background: var(--color-red); }
+    .c-red-deep    { background: var(--color-red-deep); }
+    .c-green       { background: var(--color-green); }
+    .c-green-sage  { background: var(--color-green-sage); }
+    .c-gold        { background: var(--color-gold); }
+
+    .swatch-info.dark-label { background: var(--color-charcoal); }
+    .dark-label .swatch-name,
+    .dark-label .swatch-hex,
+    .dark-label .swatch-token { color: var(--color-cream-light); }
+  </style>
+</head>
+<body>
+  <h1 class="page-title">Primary Brand Colors</h1>
+  <p class="source-note">Source: src/styles/global.css (lines 4–15) · SB_Palette.webp</p>
+  <div class="grid">
+    <div class="swatch">
+      <div class="swatch-color c-cream"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Cream</div>
+        <div class="swatch-hex">#edddc8</div>
+        <div class="swatch-token">--color-cream</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color c-cream-light"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Cream Light</div>
+        <div class="swatch-hex">#f5ede0</div>
+        <div class="swatch-token">--color-cream-light</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color c-charcoal"></div>
+      <div class="swatch-info dark-label">
+        <div class="swatch-name">Charcoal</div>
+        <div class="swatch-hex">#2d2d2d</div>
+        <div class="swatch-token">--color-charcoal</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color c-black"></div>
+      <div class="swatch-info dark-label">
+        <div class="swatch-name">Black</div>
+        <div class="swatch-hex">#1a1a1a</div>
+        <div class="swatch-token">--color-black</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color c-orange"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Orange</div>
+        <div class="swatch-hex">#f5872c</div>
+        <div class="swatch-token">--color-orange</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color c-orange-dark"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Orange Dark</div>
+        <div class="swatch-hex">#e06b10</div>
+        <div class="swatch-token">--color-orange-dark</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color c-red"></div>
+      <div class="swatch-info dark-label">
+        <div class="swatch-name">Red</div>
+        <div class="swatch-hex">#c4401a</div>
+        <div class="swatch-token">--color-red</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color c-red-deep"></div>
+      <div class="swatch-info dark-label">
+        <div class="swatch-name">Red Deep</div>
+        <div class="swatch-hex">#a83215</div>
+        <div class="swatch-token">--color-red-deep</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color c-green"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Green</div>
+        <div class="swatch-hex">#7a9a4e</div>
+        <div class="swatch-token">--color-green</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color c-green-sage"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Green Sage</div>
+        <div class="swatch-hex">#8dad5c</div>
+        <div class="swatch-token">--color-green-sage</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color c-gold"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Gold</div>
+        <div class="swatch-hex">#d4a843</div>
+        <div class="swatch-token">--color-gold</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

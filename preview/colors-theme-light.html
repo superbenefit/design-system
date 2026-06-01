@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SuperBenefit — Light Theme</title>
+  <link rel="icon" href="../assets/sb-icon.jpg" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../colors_and_type.css" />
+  <style>
+    body {
+      padding: var(--space-xl);
+      background: var(--bg);
+    }
+    .page-title {
+      font-family: var(--font-serif);
+      font-size: var(--text-2xl);
+      margin-bottom: var(--space-sm);
+      color: var(--fg);
+    }
+    .source-note {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: var(--text-xs);
+      color: var(--muted);
+      margin-bottom: var(--space-xl);
+    }
+    .demo {
+      max-width: 800px;
+    }
+    .demo-section {
+      background: var(--surface);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+      margin-bottom: var(--space-lg);
+      box-shadow: var(--shadow-sm);
+    }
+    .demo-label {
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 600;
+      color: var(--color-orange);
+      margin-bottom: var(--space-md);
+    }
+    .demo-text { color: var(--fg); }
+    .demo-muted { color: var(--muted); }
+    .demo-link { color: var(--accent); }
+    .demo-border {
+      border: 1px solid var(--border-light);
+      padding: var(--space-md);
+      border-radius: var(--radius-sm);
+      margin-top: var(--space-md);
+    }
+    .demo-card {
+      background: var(--surface);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+      box-shadow: var(--shadow-sm);
+      border-left: 3px solid var(--accent);
+    }
+    .demo-tag {
+      display: inline-block;
+      font-size: var(--text-xs);
+      padding: 0.2em 0.7em;
+      background: rgba(122, 154, 78, 0.15);
+      color: var(--color-green);
+      border-radius: var(--radius-pill);
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="page-title">Light Theme Semantic Colors</h1>
+  <p class="source-note">Source: src/styles/global.css — body background: var(--color-cream) · BlogCard.astro: var(--color-cream-light) surfaces · Nav.astro: var(--color-cream) text on dark header</p>
+  <div class="demo">
+    <div class="demo-section">
+      <div class="demo-label">Background & Surface</div>
+      <p class="demo-text">This page uses <code>--bg</code> (#edddc8 cream) as the page background and <code>--surface</code> (#f5ede0 cream-light) for elevated cards.</p>
+    </div>
+    <div class="demo-section">
+      <div class="demo-label">Text & Muted</div>
+      <p class="demo-text">Primary text uses <code>--fg</code> (#2d2d2d charcoal).</p>
+      <p class="demo-muted">Muted text uses <code>--muted</code> at 70% opacity.</p>
+    </div>
+    <div class="demo-section">
+      <div class="demo-label">Accent & Links</div>
+      <p class="demo-text">Links use <a href="#" class="demo-link">--accent (#f5872c orange)</a> and darken to red on hover.</p>
+    </div>
+    <div class="demo-section">
+      <div class="demo-label">Card Example</div>
+      <div class="demo-card">
+        <p class="demo-text">A card with cream-light background and an orange left-border accent.</p>
+        <span class="demo-tag">Governance</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

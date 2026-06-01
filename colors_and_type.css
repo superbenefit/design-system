@@ -1,0 +1,254 @@
+/**
+ * SuperBenefit Design System — Colors & Typography
+ * Source: https://github.com/superbenefit/sb-website
+ * Generated from src/styles/global.css + component evidence
+ *
+ * Usage: Link this file in your HTML `<head>`:
+ *   <link rel="stylesheet" href="colors_and_type.css">
+ *
+ * Fonts: Load Playfair Display and Inter from Google Fonts:
+ *   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+ */
+
+/* ============================================================
+   FONT LOADING
+   ============================================================
+   IMPORTANT: For reliable font loading in browsers, add this
+   <link> tag to your HTML <head> BEFORE linking colors_and_type.css:
+
+   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+   The @font-face declarations below are a fallback for contexts
+   where the Google Fonts link cannot be used.
+   ============================================================ */
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/playfairdisplay/v37/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtM.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2') format('woff2');
+}
+
+/* ============================================================
+   DESIGN TOKENS
+   ============================================================ */
+
+:root {
+  /* ----------------------------------------------------------
+     Brand Colors — from SB_Palette.webp and global.css
+     ---------------------------------------------------------- */
+  --color-cream:       #edddc8;
+  --color-cream-light: #f5ede0;
+  --color-charcoal:    #2d2d2d;
+  --color-black:       #1a1a1a;
+  --color-orange:      #f5872c;
+  --color-orange-dark: #e06b10;
+  --color-red:         #c4401a;
+  --color-red-deep:    #a83215;
+  --color-green:       #7a9a4e;
+  --color-green-sage:  #8dad5c;
+  --color-gold:        #d4a843;
+
+  /* ----------------------------------------------------------
+     Semantic Colors
+     ---------------------------------------------------------- */
+  --bg:                var(--color-cream);
+  --bg-dark:           var(--color-black);
+  --surface:           var(--color-cream-light);
+  --surface-glass:     rgba(30, 25, 20, 0.35);
+  --fg:                var(--color-charcoal);
+  --fg-dark:           var(--color-cream);
+  --muted:             rgba(45, 45, 45, 0.7);
+  --muted-dark:        rgba(237, 221, 200, 0.75);
+  --border:            rgba(255, 255, 255, 0.08);
+  --border-light:      rgba(0, 0, 0, 0.08);
+  --accent:            var(--color-orange);
+  --accent-secondary:  var(--color-green);
+  --accent-tertiary:   var(--color-red);
+
+  /* ----------------------------------------------------------
+     Gradients
+     ---------------------------------------------------------- */
+  --gradient-rainbow: conic-gradient(
+    from 180deg,
+    var(--color-gold),
+    var(--color-orange),
+    var(--color-red),
+    var(--color-green),
+    var(--color-gold)
+  );
+  --gradient-warm: linear-gradient(135deg, var(--color-orange), var(--color-red), var(--color-gold));
+  --gradient-cream: linear-gradient(168deg, var(--color-cream) 0%, var(--color-cream-light) 50%, var(--color-cream) 100%);
+
+  /* ----------------------------------------------------------
+     Typography
+     ---------------------------------------------------------- */
+  --font-serif:  'Playfair Display', Georgia, 'Iowan Old Style', serif;
+  --font-sans:   'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --font-display: 'Playfair Display', Georgia, 'Iowan Old Style', serif;
+  --font-body:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --font-mono:    ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --text-xs:   clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --text-sm:   clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+  --text-base: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+  --text-lg:   clamp(1.125rem, 1rem + 0.75vw, 1.375rem);
+  --text-xl:   clamp(1.5rem, 1.2rem + 1.5vw, 2rem);
+  --text-2xl:  clamp(2rem, 1.5rem + 2.5vw, 3rem);
+  --text-3xl:  clamp(2.5rem, 1.8rem + 3.5vw, 4.5rem);
+  --text-hero: clamp(3rem, 2rem + 5vw, 6rem);
+
+  /* ----------------------------------------------------------
+     Spacing
+     ---------------------------------------------------------- */
+  --space-xs:  0.25rem;  /* 4px  */
+  --space-sm:  0.5rem;   /* 8px  */
+  --space-md:  1rem;     /* 16px */
+  --space-lg:  2rem;     /* 32px */
+  --space-xl:  4rem;     /* 64px */
+  --space-2xl: 8rem;     /* 128px */
+
+  /* ----------------------------------------------------------
+     Layout
+     ---------------------------------------------------------- */
+  --max-width:     1200px;
+  --header-height: 4rem;
+  --radius-sm:     8px;
+  --radius-md:     12px;
+  --radius-lg:     20px;
+  --radius-pill:   50px;
+
+  /* ----------------------------------------------------------
+     Transitions
+     ---------------------------------------------------------- */
+  --transition-fast:   150ms ease;
+  --transition-medium: 300ms ease;
+  --transition-slow:   600ms ease-out;
+
+  /* ----------------------------------------------------------
+     Shadows
+     ---------------------------------------------------------- */
+  --shadow-sm:  0 1px 3px rgba(0, 0, 0, 0.12);
+  --shadow-md:  0 4px 12px rgba(0, 0, 0, 0.15);
+  --shadow-lg:  0 8px 30px rgba(0, 0, 0, 0.2);
+  --shadow-glow: 0 0 20px rgba(245, 135, 44, 0.3);
+  --shadow-card-dark: 0 4px 24px rgba(0, 0, 0, 0.4), 0 12px 48px rgba(0, 0, 0, 0.25);
+}
+
+/* ============================================================
+   BASE STYLES
+   ============================================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  color: var(--fg);
+  background-color: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-red);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--fg);
+  text-wrap: balance;
+}
+
+h1 { font-size: var(--text-3xl); }
+h2 { font-size: var(--text-2xl); }
+h3 { font-size: var(--text-xl); }
+h4 { font-size: var(--text-lg); }
+
+p {
+  max-width: 70ch;
+}
+
+/* ============================================================
+   UTILITIES
+   ============================================================ */
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--space-lg);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SuperBenefit — Dark Theme</title>
+  <link rel="icon" href="../assets/sb-icon.jpg" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../colors_and_type.css" />
+  <style>
+    body {
+      padding: var(--space-xl);
+      background: var(--bg-dark);
+      color: var(--fg-dark);
+    }
+    .page-title {
+      font-family: var(--font-serif);
+      font-size: var(--text-2xl);
+      margin-bottom: var(--space-sm);
+      color: var(--fg-dark);
+    }
+    .source-note {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: var(--text-xs);
+      color: var(--muted-dark);
+      margin-bottom: var(--space-xl);
+    }
+    .demo {
+      max-width: 800px;
+    }
+    .demo-section {
+      background: rgba(30, 25, 20, 0.35);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+      margin-bottom: var(--space-lg);
+    }
+    .demo-label {
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 600;
+      color: var(--color-orange);
+      margin-bottom: var(--space-md);
+    }
+    .demo-text { color: var(--fg-dark); }
+    .demo-muted { color: var(--muted-dark); }
+    .demo-link { color: var(--color-orange); }
+    .demo-link:hover { color: var(--color-gold); }
+    .demo-card {
+      background: rgba(30, 25, 20, 0.35);
+      border: 1px solid rgba(245, 135, 44, 0.12);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+    }
+    .demo-card:hover {
+      border-color: rgba(245, 135, 44, 0.30);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+    }
+    .rainbow-stripe {
+      height: 3px;
+      background: var(--gradient-rainbow);
+      border-radius: 3px 3px 0 0;
+      margin: calc(-1 * var(--space-lg)) calc(-1 * var(--space-lg)) var(--space-lg);
+    }
+    .demo-tag {
+      display: inline-block;
+      font-size: var(--text-xs);
+      padding: 0.2em 0.7em;
+      background: rgba(122, 154, 78, 0.18);
+      color: var(--color-green-sage);
+      border-radius: var(--radius-pill);
+      font-weight: 500;
+    }
+    .grain {
+      position: fixed;
+      inset: 0;
+      opacity: 0.05;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 200px 200px;
+      mix-blend-mode: overlay;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .content { position: relative; z-index: 1; }
+  </style>
+</head>
+<body>
+  <div class="grain"></div>
+  <div class="content">
+    <h1 class="page-title">Dark Theme Semantic Colors</h1>
+    <p class="source-note">Source: src/components/StorySection.astro — glass cards with rgba(30,25,20,0.35) + backdrop-filter · Hero.astro: var(--color-black) background</p>
+    <div class="demo">
+      <div class="demo-section">
+        <div class="demo-label">Background & Surface</div>
+        <p class="demo-text">This page uses <code>--bg-dark</code> (#1a1a1a black) as the page background and glass surfaces at <code>rgba(30, 25, 20, 0.35)</code> with <code>backdrop-filter: blur(12px)</code>.</p>
+      </div>
+      <div class="demo-section">
+        <div class="demo-label">Text & Muted</div>
+        <p class="demo-text">Primary text uses <code>--fg-dark</code> (#edddc8 cream).</p>
+        <p class="demo-muted">Muted text uses <code>--muted-dark</code> at 75% opacity.</p>
+      </div>
+      <div class="demo-section">
+        <div class="demo-label">Accent & Links</div>
+        <p class="demo-text">Links use <a href="#" class="demo-link">--color-orange (#f5872c)</a> and shift to gold on hover.</p>
+      </div>
+      <div class="demo-section">
+        <div class="demo-label">Glass Card Example</div>
+        <div class="demo-card">
+          <div class="rainbow-stripe"></div>
+          <p class="demo-text">A glass card with dark translucent background, orange-tinted border, and a rainbow accent stripe at the top.</p>
+          <span class="demo-tag">Systems</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

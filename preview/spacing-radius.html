@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SuperBenefit — Radius & Shadows</title>
+  <link rel="icon" href="../assets/sb-icon.jpg" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../colors_and_type.css" />
+  <style>
+    body {
+      padding: var(--space-xl);
+      background: var(--bg);
+    }
+    .page-title {
+      font-family: var(--font-serif);
+      font-size: var(--text-2xl);
+      margin-bottom: var(--space-xl);
+      color: var(--fg);
+    }
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: var(--text-xl);
+      margin: var(--space-xl) 0 var(--space-sm);
+      color: var(--fg);
+    }
+    .source-note {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: var(--text-xs);
+      color: var(--muted);
+      margin-bottom: var(--space-lg);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: var(--space-lg);
+    }
+    .demo {
+      background: var(--surface);
+      padding: var(--space-lg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-sm);
+      min-height: 120px;
+    }
+    .demo-box {
+      width: 80px;
+      height: 80px;
+      background: var(--color-orange);
+    }
+    .demo-label {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: var(--text-xs);
+      color: var(--muted);
+      text-align: center;
+    }
+
+    /* Radius variants */
+    .r-sm   { border-radius: var(--radius-sm); }
+    .r-md   { border-radius: var(--radius-md); }
+    .r-lg   { border-radius: var(--radius-lg); }
+    .r-pill { border-radius: var(--radius-pill); }
+
+    /* Shadow variants */
+    .s-sm  { box-shadow: var(--shadow-sm); }
+    .s-md  { box-shadow: var(--shadow-md); }
+    .s-lg  { box-shadow: var(--shadow-lg); }
+    .s-glow { box-shadow: var(--shadow-glow); }
+    .s-card-dark { box-shadow: var(--shadow-card-dark); background: var(--color-charcoal); }
+  </style>
+</head>
+<body>
+  <h1 class="page-title">Radius & Shadows</h1>
+  <p class="source-note">Source: src/styles/global.css — radius/shadow tokens · BlogCard.astro (12px), StorySection.astro (20px), CallToAction.astro (50px pills) · animations.css (shadow-glow used in hero icon)</p>
+
+  <h2 class="section-title">Border Radius</h2>
+  <div class="grid">
+    <div class="demo">
+      <div class="demo-box r-sm"></div>
+      <div class="demo-label">--radius-sm<br>8px</div>
+    </div>
+    <div class="demo">
+      <div class="demo-box r-md"></div>
+      <div class="demo-label">--radius-md<br>12px</div>
+    </div>
+    <div class="demo">
+      <div class="demo-box r-lg"></div>
+      <div class="demo-label">--radius-lg<br>20px</div>
+    </div>
+    <div class="demo">
+      <div class="demo-box r-pill"></div>
+      <div class="demo-label">--radius-pill<br>50px</div>
+    </div>
+  </div>
+
+  <h2 class="section-title">Shadows</h2>
+  <div class="grid">
+    <div class="demo">
+      <div class="demo-box r-md s-sm"></div>
+      <div class="demo-label">--shadow-sm</div>
+    </div>
+    <div class="demo">
+      <div class="demo-box r-md s-md"></div>
+      <div class="demo-label">--shadow-md</div>
+    </div>
+    <div class="demo">
+      <div class="demo-box r-md s-lg"></div>
+      <div class="demo-label">--shadow-lg</div>
+    </div>
+    <div class="demo">
+      <div class="demo-box r-md s-glow"></div>
+      <div class="demo-label">--shadow-glow</div>
+    </div>
+    <div class="demo">
+      <div class="demo-box r-lg s-card-dark"></div>
+      <div class="demo-label">--shadow-card-dark</div>
+    </div>
+  </div>
+</body>
+</html>

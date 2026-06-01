@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SuperBenefit — Brand Assets</title>
+  <link rel="icon" href="../assets/sb-icon.jpg" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../colors_and_type.css" />
+  <style>
+    body {
+      padding: var(--space-xl);
+      background: var(--bg);
+    }
+    .page-title {
+      font-family: var(--font-serif);
+      font-size: var(--text-2xl);
+      margin-bottom: var(--space-sm);
+      color: var(--fg);
+    }
+    .source-note {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: var(--text-xs);
+      color: var(--muted);
+      margin-bottom: var(--space-xl);
+    }
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: var(--text-xl);
+      margin: var(--space-xl) 0 var(--space-lg);
+      color: var(--fg);
+    }
+    .asset-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: var(--space-lg);
+    }
+    .asset-card {
+      background: var(--surface);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-md);
+    }
+    .asset-preview {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 160px;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+    }
+    .asset-preview.dark {
+      background: var(--color-black);
+    }
+    .asset-preview img,
+    .asset-preview svg {
+      max-width: 100%;
+      max-height: 140px;
+      object-fit: contain;
+    }
+    .asset-name {
+      font-family: var(--font-sans);
+      font-size: var(--text-sm);
+      font-weight: 600;
+      color: var(--fg);
+    }
+    .asset-path {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: var(--text-xs);
+      color: var(--muted);
+    }
+    .palette-img {
+      width: 100%;
+      height: auto;
+      border-radius: var(--radius-sm);
+    }
+  </style>
+</head>
+<body>
+  <h1 class="page-title">Brand Assets</h1>
+  <p class="source-note">Source: public/images/superbenefit-logo.webp · public/images/sb-icon.jpg · public/images/brand-showcase.webp · SB_Palette.webp</p>
+
+  <h2 class="section-title">Logos & Icons</h2>
+  <div class="asset-grid">
+    <div class="asset-card">
+      <div class="asset-preview dark">
+        <img src="../assets/superbenefit-logo.webp" alt="SuperBenefit Logo" />
+      </div>
+      <div class="asset-name">SuperBenefit Logo</div>
+      <div class="asset-path">assets/superbenefit-logo.webp</div>
+    </div>
+    <div class="asset-card">
+      <div class="asset-preview dark">
+        <img src="../assets/sb-icon.jpg" alt="SuperBenefit Icon" />
+      </div>
+      <div class="asset-name">SB Icon</div>
+      <div class="asset-path">assets/sb-icon.jpg</div>
+    </div>
+    <div class="asset-card">
+      <div class="asset-preview dark">
+        <img src="../assets/sb-icon.jpg" alt="Favicon" />
+      </div>
+      <div class="asset-name">Favicon</div>
+      <div class="asset-path">assets/sb-icon.jpg</div>
+    </div>
+  </div>
+
+  <h2 class="section-title">Brand Showcase</h2>
+  <div class="asset-grid">
+    <div class="asset-card">
+      <div class="asset-preview">
+        <img src="../assets/brand-showcase.webp" alt="Brand Showcase" class="palette-img" />
+      </div>
+      <div class="asset-name">Brand Showcase</div>
+      <div class="asset-path">assets/brand-showcase.webp</div>
+    </div>
+    <div class="asset-card">
+      <div class="asset-preview">
+        <img src="../assets/SB_Palette.webp" alt="SB Palette" class="palette-img" />
+      </div>
+      <div class="asset-name">SB Palette</div>
+      <div class="asset-path">assets/SB_Palette.webp</div>
+    </div>
+  </div>
+
+  <h2 class="section-title">Build Assets</h2>
+  <div class="asset-grid">
+    <div class="asset-card">
+      <div class="asset-preview dark">
+        <img src="../build/logo.webp" alt="Build Logo" />
+      </div>
+      <div class="asset-name">Runtime Logo</div>
+      <div class="asset-path">build/logo.webp</div>
+    </div>
+    <div class="asset-card">
+      <div class="asset-preview dark">
+        <img src="../build/icon.jpg" alt="Build Icon" />
+      </div>
+      <div class="asset-name">Runtime Icon</div>
+      <div class="asset-path">build/icon.jpg</div>
+    </div>
+  </div>
+</body>
+</html>

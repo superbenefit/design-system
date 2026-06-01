@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SuperBenefit — Button Components</title>
+  <link rel="icon" href="../assets/sb-icon.jpg" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../colors_and_type.css" />
+  <style>
+    body {
+      padding: var(--space-xl);
+      background: var(--bg);
+    }
+    .page-title {
+      font-family: var(--font-serif);
+      font-size: var(--text-2xl);
+      margin-bottom: var(--space-xl);
+      color: var(--fg);
+    }
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: var(--text-xl);
+      margin: var(--space-xl) 0 var(--space-sm);
+      color: var(--fg);
+    }
+    .source-note {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: var(--text-xs);
+      color: var(--muted);
+      margin-bottom: var(--space-lg);
+    }
+    .demo {
+      background: var(--surface);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+      margin-bottom: var(--space-lg);
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-md);
+      align-items: center;
+    }
+    .demo-dark {
+      background: var(--color-black);
+    }
+
+    /* Primary button */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.9em 2em;
+      border-radius: var(--radius-pill);
+      font-weight: 600;
+      font-size: var(--text-base);
+      letter-spacing: 0.02em;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+      text-decoration: none;
+      background: var(--color-charcoal);
+      color: var(--color-cream);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      color: var(--color-cream);
+    }
+
+    /* Ghost button */
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.9em 2em;
+      border-radius: var(--radius-pill);
+      font-weight: 600;
+      font-size: var(--text-base);
+      letter-spacing: 0.02em;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+      text-decoration: none;
+      background: transparent;
+      color: var(--color-cream);
+      border: 2px solid var(--color-cream);
+    }
+    .btn-ghost:hover {
+      background: var(--color-cream);
+      color: var(--color-orange);
+      transform: translateY(-2px);
+    }
+
+    /* Story CTA buttons (theme-aware glass) */
+    .story-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5em;
+      border-radius: var(--radius-pill);
+      color: var(--color-cream);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background var(--transition-medium), border-color var(--transition-medium), transform var(--transition-fast), box-shadow var(--transition-medium);
+      padding: 0.85em 2em;
+      font-size: var(--text-base);
+    }
+    .story-btn--green {
+      background: rgba(122, 154, 78, 0.18);
+      border: 1px solid var(--color-green);
+    }
+    .story-btn--green:hover {
+      background: rgba(122, 154, 78, 0.30);
+      box-shadow: 0 4px 20px rgba(122, 154, 78, 0.25);
+      transform: translateY(-2px);
+    }
+    .story-btn--orange {
+      background: rgba(245, 135, 44, 0.18);
+      border: 1px solid var(--color-orange);
+    }
+    .story-btn--orange:hover {
+      background: rgba(245, 135, 44, 0.30);
+      box-shadow: 0 4px 20px rgba(245, 135, 44, 0.25);
+      transform: translateY(-2px);
+    }
+    .story-btn--red {
+      background: rgba(196, 64, 26, 0.18);
+      border: 1px solid var(--color-red);
+    }
+    .story-btn--red:hover {
+      background: rgba(196, 64, 26, 0.30);
+      box-shadow: 0 4px 20px rgba(196, 64, 26, 0.25);
+      transform: translateY(-2px);
+    }
+
+    .story-btn--ghost {
+      background: none;
+      border: 1px solid rgba(237, 221, 200, 0.2);
+      color: var(--color-cream);
+      opacity: 0.7;
+      font-weight: 500;
+      font-size: var(--text-sm);
+      padding: 0.7em 1.6em;
+    }
+    .story-btn--ghost:hover {
+      opacity: 1;
+      border-color: rgba(237, 221, 200, 0.4);
+      background: rgba(255, 255, 255, 0.05);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <h1 class="page-title">Button Components</h1>
+  <p class="source-note" data-source-component="CallToAction.astro">Source: src/components/CallToAction.astro (primary/ghost) · src/components/StorySection.astro (glass CTA variants) · src/styles/global.css (transition tokens)</p>
+
+  <h2 class="section-title">Light Background</h2>
+  <p class="source-note">Source: CallToAction.astro — .btn-primary</p>
+  <div class="demo">
+    <a href="#" class="btn-primary">Primary Button</a>
+  </div>
+
+  <h2 class="section-title">Dark Background</h2>
+  <p class="source-note">Source: CallToAction.astro — .btn-primary, .btn-ghost</p>
+  <div class="demo demo-dark">
+    <a href="#" class="btn-primary">Primary Button</a>
+    <a href="#" class="btn-ghost">Ghost Button</a>
+  </div>
+
+  <h2 class="section-title">Story CTA Buttons (Glass)</h2>
+  <p class="source-note">Source: StorySection.astro — .story-btn--primary (theme variants), .story-btn--ghost</p>
+  <div class="demo demo-dark">
+    <a href="#" class="story-btn story-btn--green">Green CTA</a>
+    <a href="#" class="story-btn story-btn--orange">Orange CTA</a>
+    <a href="#" class="story-btn story-btn--red">Red CTA</a>
+    <a href="#" class="story-btn story-btn--ghost">Ghost CTA</a>
+  </div>
+</body>
+</html>

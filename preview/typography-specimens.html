@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SuperBenefit — Typography Specimens</title>
+  <link rel="icon" href="../assets/sb-icon.jpg" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../colors_and_type.css" />
+  <style>
+    body {
+      padding: var(--space-xl);
+      background: var(--bg);
+    }
+    .page-title {
+      font-family: var(--font-serif);
+      font-size: var(--text-2xl);
+      margin-bottom: var(--space-sm);
+      color: var(--fg);
+    }
+    .source-note {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: var(--text-xs);
+      color: var(--muted);
+      margin-bottom: var(--space-xl);
+    }
+    .specimen {
+      background: var(--surface);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+      margin-bottom: var(--space-lg);
+      box-shadow: var(--shadow-sm);
+    }
+    .specimen-label {
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 600;
+      color: var(--color-orange);
+      margin-bottom: var(--space-sm);
+    }
+    .specimen-meta {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: var(--text-xs);
+      color: var(--muted);
+      margin-bottom: var(--space-md);
+    }
+
+    /* Scale specimens */
+    .hero-text {
+      font-family: var(--font-serif);
+      font-size: var(--text-hero);
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, var(--color-cream), var(--color-gold), var(--color-orange));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .h1-text { font-family: var(--font-serif); font-size: var(--text-3xl); font-weight: 700; line-height: 1.15; color: var(--fg); }
+    .h2-text { font-family: var(--font-serif); font-size: var(--text-2xl); font-weight: 700; line-height: 1.15; color: var(--fg); }
+    .h3-text { font-family: var(--font-serif); font-size: var(--text-xl); font-weight: 700; line-height: 1.15; color: var(--fg); }
+    .h4-text { font-family: var(--font-serif); font-size: var(--text-lg); font-weight: 700; line-height: 1.15; color: var(--fg); }
+    .body-text { font-family: var(--font-sans); font-size: var(--text-base); line-height: 1.6; color: var(--fg); max-width: 70ch; }
+    .label-text {
+      font-family: var(--font-sans);
+      font-size: var(--text-xs);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--color-orange);
+    }
+    .nav-text {
+      font-family: var(--font-sans);
+      font-size: var(--text-sm);
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--fg);
+    }
+
+    .dark-box {
+      background: var(--color-black);
+      padding: var(--space-lg);
+      border-radius: var(--radius-md);
+      margin-top: var(--space-md);
+    }
+    .dark-box .hero-text {
+      filter: drop-shadow(0 2px 10px rgba(212, 168, 67, 0.3));
+    }
+  </style>
+</head>
+<body>
+  <h1 class="page-title">Typography Specimens</h1>
+  <p class="source-note">Source: src/styles/global.css (lines 28–39) · src/layouts/BaseLayout.astro (Playfair Display + Inter font loading)</p>
+
+  <div class="specimen">
+    <div class="specimen-label">Hero — Playfair Display 900</div>
+    <div class="specimen-meta">var(--text-hero) · clamp(3rem, 2rem + 5vw, 6rem)</div>
+    <div class="hero-text">SuperBenefit</div>
+    <div class="dark-box">
+      <div class="hero-text">SuperBenefit</div>
+    </div>
+  </div>
+
+  <div class="specimen">
+    <div class="specimen-label">H1 — Playfair Display 700</div>
+    <div class="specimen-meta">var(--text-3xl) · clamp(2.5rem, 1.8rem + 3.5vw, 4.5rem)</div>
+    <div class="h1-text">We're a community of practice using emerging technologies for systems transformation.</div>
+  </div>
+
+  <div class="specimen">
+    <div class="specimen-label">H2 — Playfair Display 700</div>
+    <div class="specimen-meta">var(--text-2xl) · clamp(2rem, 1.5rem + 2.5vw, 3rem)</div>
+    <div class="h2-text">Pull Up a Chair</div>
+  </div>
+
+  <div class="specimen">
+    <div class="specimen-label">H3 — Playfair Display 700</div>
+    <div class="specimen-meta">var(--text-xl) · clamp(1.5rem, 1.2rem + 1.5vw, 2rem)</div>
+    <div class="h3-text">Exploring governance, DAOs, and systems innovation</div>
+  </div>
+
+  <div class="specimen">
+    <div class="specimen-label">H4 — Playfair Display 700</div>
+    <div class="specimen-meta">var(--text-lg) · clamp(1.125rem, 1rem + 0.75vw, 1.375rem)</div>
+    <div class="h4-text">Knowledge Garden</div>
+  </div>
+
+  <div class="specimen">
+    <div class="specimen-label">Body — Inter 400</div>
+    <div class="specimen-meta">var(--text-base) · clamp(1rem, 0.9rem + 0.5vw, 1.125rem) · line-height 1.6 · max-width 70ch</div>
+    <p class="body-text">SuperBenefit's mission is to develop the social and financial flywheels that enable the invention and acceleration of a better world; Strengthening capacities for systems innovation and supporting people to clarify pathways towards shared goals.</p>
+  </div>
+
+  <div class="specimen">
+    <div class="specimen-label">Label — Inter 600</div>
+    <div class="specimen-meta">var(--text-xs) · uppercase · letter-spacing 0.14em</div>
+    <div class="label-text">Our Purpose</div>
+  </div>
+
+  <div class="specimen">
+    <div class="specimen-label">Nav — Inter 500</div>
+    <div class="specimen-meta">var(--text-sm) · uppercase · letter-spacing 0.04em</div>
+    <div class="nav-text">About · Knowledge · Governance</div>
+  </div>
+</body>
+</html>

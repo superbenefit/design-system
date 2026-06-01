@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SuperBenefit — Spacing Tokens</title>
+  <link rel="icon" href="../assets/sb-icon.jpg" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../colors_and_type.css" />
+  <style>
+    body {
+      padding: var(--space-xl);
+      background: var(--bg);
+    }
+    .page-title {
+      font-family: var(--font-serif);
+      font-size: var(--text-2xl);
+      margin-bottom: var(--space-sm);
+      color: var(--fg);
+    }
+    .source-note {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: var(--text-xs);
+      color: var(--muted);
+      margin-bottom: var(--space-xl);
+    }
+    .scale {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-lg);
+    }
+    .token-row {
+      display: flex;
+      align-items: center;
+      gap: var(--space-lg);
+    }
+    .token-visual {
+      background: var(--color-orange);
+      border-radius: var(--radius-sm);
+      flex-shrink: 0;
+    }
+    .token-info {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: var(--text-sm);
+      color: var(--fg);
+    }
+    .token-name {
+      font-weight: 600;
+      color: var(--color-orange);
+    }
+    .token-value {
+      color: var(--muted);
+      font-size: var(--text-xs);
+    }
+
+    .xs  { width: var(--space-xs);  height: var(--space-xs); }
+    .sm  { width: var(--space-sm);  height: var(--space-sm); }
+    .md  { width: var(--space-md);  height: var(--space-md); }
+    .lg  { width: var(--space-lg);  height: var(--space-lg); }
+    .xl  { width: var(--space-xl);  height: var(--space-xl); }
+    .2xl { width: var(--space-2xl); height: var(--space-2xl); }
+  </style>
+</head>
+<body>
+  <h1 class="page-title">Spacing Tokens</h1>
+  <p class="source-note">Source: src/styles/global.css — spacing scale used across BlogCard.astro, StorySection.astro, Header.astro</p>
+  <div class="scale">
+    <div class="token-row">
+      <div class="token-visual xs"></div>
+      <div class="token-info">
+        <span class="token-name">--space-xs</span>
+        <span class="token-value">0.25rem (4px)</span>
+      </div>
+    </div>
+    <div class="token-row">
+      <div class="token-visual sm"></div>
+      <div class="token-info">
+        <span class="token-name">--space-sm</span>
+        <span class="token-value">0.5rem (8px)</span>
+      </div>
+    </div>
+    <div class="token-row">
+      <div class="token-visual md"></div>
+      <div class="token-info">
+        <span class="token-name">--space-md</span>
+        <span class="token-value">1rem (16px)</span>
+      </div>
+    </div>
+    <div class="token-row">
+      <div class="token-visual lg"></div>
+      <div class="token-info">
+        <span class="token-name">--space-lg</span>
+        <span class="token-value">2rem (32px)</span>
+      </div>
+    </div>
+    <div class="token-row">
+      <div class="token-visual xl"></div>
+      <div class="token-info">
+        <span class="token-name">--space-xl</span>
+        <span class="token-value">4rem (64px)</span>
+      </div>
+    </div>
+    <div class="token-row">
+      <div class="token-visual 2xl"></div>
+      <div class="token-info">
+        <span class="token-name">--space-2xl</span>
+        <span class="token-value">8rem (128px)</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

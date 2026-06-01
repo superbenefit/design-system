@@ -1,0 +1,24 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Node / npm (in case someone adds tooling)
+node_modules/
+package-lock.json
+
+# Open Design runtime / dev temp files
+.od/
+.tmp/
+*.png
+*.artifact.json
+!assets/*.jpg
+!assets/*.webp
+!build/*.webp
+!build/*.jpg
