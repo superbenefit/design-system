@@ -12,8 +12,8 @@ This design system is derived from the SuperBenefit website source repository:
 - **Repository:** `https://github.com/superbenefit/sb-website`
 - **Intake method:** Git clone (local this-device access)
 - **Evidence note:** `context/github/superbenefit-sb-website.md`
-- **Snapshot files:** `context/github/superbenefit-sb-website/files/` (40 source files)
-- **Stack:** Astro 5, Cloudflare Workers, TypeScript, plain CSS (no Tailwind)
+- **Snapshot files:** `context/github/superbenefit-sb-website/files/` (36 source files)
+- **Stack:** Astro 6 (`astro ^6.0.4` in the snapshot's `package.json`), Cloudflare Workers, TypeScript, plain CSS (no Tailwind) at intake. The live site has since moved to Astro 7, with Tailwind CSS v4 available alongside the same CSS custom properties
 
 ### Source files backing each section
 
@@ -31,7 +31,7 @@ This design system is derived from the SuperBenefit website source repository:
 
 ### UI Kit Components
 
-In addition to the source-derived website components, the design system ships an applied UI kit (`ui_kits/app/components/`) with reusable app-level components:
+In addition to the source-derived website components, the design system ships an applied UI kit (`ui_kits/app/components/`) with reusable components. `App`, `Header`, `Sidebar`, `Hero`, `StoryCard`, `BlogCard` and `Footer` restate the website's shell, hero and cards; the app-level components are:
 
 - **Avatar** — User/assistant avatar with status indicator (`online`/`away`/`busy`/`offline`) and initials fallback
 - **ChatMessage** — Chat bubble with sent/received alignment, avatar, timestamp, read status, and text/code variants
@@ -50,7 +50,7 @@ These components apply the SuperBenefit design tokens to common app patterns (ch
 
 **Mood:** Warm, visionary, and organic. The system evokes a sense of collaborative exploration and regenerative potential. It balances lush watercolor textures with clean typography and warm lighting effects. The overall feeling is approachable yet elevated — like a well-crafted journal or community gathering space rather than a sterile tech product.
 
-**Source context:** The SuperBenefit website (`https://github.com/superbenefit/sb-website`) uses Astro 5 with plain CSS (no Tailwind). Design tokens live in `src/styles/global.css` and component-scoped `<style>` blocks. The visual language prioritizes:
+**Source context:** The SuperBenefit website (`https://github.com/superbenefit/sb-website`) used Astro 6 with plain CSS (no Tailwind) when it was captured; it now runs Astro 7 with Tailwind CSS v4 available. Design tokens live in `src/styles/global.css` and component-scoped `<style>` blocks. The visual language prioritizes:
 - Lush watercolor textures (evident in `sb-icon.jpg`)
 - Soft paper/parchment backgrounds (`--color-cream`, `--color-cream-light`)
 - Clean, gradual transitions and warm lighting

@@ -4,7 +4,7 @@ description: >
   Reusable warm, visionary design system for community-forward web experiences.
   Playfair Display + Inter typography, cream/charcoal/orange palette,
   glass cards, scroll-driven animations, and rainbow accent details.
-  Extracted from the SuperBenefit website (Astro 5, plain CSS).
+  Extracted from the SuperBenefit website (captured from Astro 6 with plain CSS).
 user-invocable: true
 ---
 
@@ -12,7 +12,7 @@ user-invocable: true
 
 ## What's inside
 
-> Source: `context/github/superbenefit-sb-website.md` and 40 snapshot files under `context/github/superbenefit-sb-website/files/`
+> Source: `context/github/superbenefit-sb-website.md` and 36 snapshot files under `context/github/superbenefit-sb-website/files/`
 
 This skill provides a complete, reusable design system package for agents building SuperBenefit-related web experiences:
 
@@ -34,9 +34,9 @@ This skill provides a complete, reusable design system package for agents buildi
 
 - **Product:** SuperBenefit — a community of practice using emerging technologies for systems transformation (governance, DAOs, regenerative systems)
 - **Repository:** `https://github.com/superbenefit/sb-website`
-- **Stack:** Astro 5, Cloudflare Workers, TypeScript, plain CSS (no Tailwind)
+- **Stack:** Astro 6 (`astro ^6.0.4` in the snapshot's `package.json`), Cloudflare Workers, TypeScript, plain CSS (no Tailwind) at intake. The live site has since moved to Astro 7, with Tailwind CSS v4 available alongside the same CSS custom properties
 - **Fonts:** Playfair Display (serif display), Inter (sans body) — declared in `src/layouts/BaseLayout.astro` via Astro's experimental `<Font>` component
-- **Evidence:** Git-clone intake of `superbenefit/sb-website` with 40 snapshot files under `context/github/superbenefit-sb-website/files/`
+- **Evidence:** Git-clone intake of `superbenefit/sb-website` with 36 snapshot files under `context/github/superbenefit-sb-website/files/`
 
 ### Key source files by concern
 

@@ -204,7 +204,7 @@ If you are an AI coding agent generating pages for a user who told you "use the 
 
 - `preview/*.html` — 9 reviewable HTML cards showing how tokens render. Open these in a browser to verify your token usage.
 - `source_examples/*.astro` — Original Astro source snapshots (Header, Hero, StorySection, BlogCard, CallToAction, Footer, global.css, animations.css). Copy their patterns.
-- `ui_kits/app/index.html` — Browser-runnable component browser. Loads React 18 + Babel + all 14 component JSX files.
+- `ui_kits/app/index.html` — Browser-runnable component browser. Loads React 18 + Babel + all 17 component JSX files.
 
 ### Files to ignore
 
@@ -241,7 +241,7 @@ If you are an AI coding agent generating pages for a user who told you "use the 
 ### Anti-patterns to avoid
 
 - ❌ Inter or Roboto as a display/heading face — use Playfair Display (`var(--font-serif)`)
-- ❌ Tailwind CSS — this system uses plain CSS custom properties
+- ❌ Tailwind CSS in artifacts built from this kit — it uses plain CSS custom properties (the live site has Tailwind v4 available, reading the same tokens)
 - ❌ JavaScript animation libraries — use CSS scroll-driven animations (`animation-timeline`)
 - ❌ Aggressive purple/violet gradients
 - ❌ Generic emoji feature icons (✨ 🚀 🎯)
@@ -264,14 +264,14 @@ If you are an AI coding agent generating pages for a user who told you "use the 
 
 ### Primary UI Surfaces
 
-- **Public website** (`superbenefit.org`) — Astro 5 static site with scroll-driven animations, visual storytelling homepage, blog, and about pages. Deployed to Cloudflare Workers.
+- **Public website** (`superbenefit.org`) — Astro site with scroll-driven animations, deployed to Cloudflare Workers. At intake it ran Astro 6 with a story-card homepage and a blog; it now runs Astro 7, with a services-led homepage, a contact form, and its other pages still in draft.
 - **Knowledge Garden** (`knowledge.superbenefit.dev`) — External knowledge base for community-generated content
 - **Governance portal** (`governance.superbenefit.dev`) — External governance tools and documentation
 
 ## Source Repository
 
 - **GitHub:** `https://github.com/superbenefit/sb-website`
-- **Stack:** Astro 5, Cloudflare Workers, TypeScript, plain CSS (no Tailwind)
+- **Stack:** Astro 6 (`astro ^6.0.4` in the snapshot's `package.json`), Cloudflare Workers, TypeScript, plain CSS (no Tailwind) at intake. The live site has since moved to Astro 7, with Tailwind CSS v4 available alongside the same CSS custom properties
 - **Fonts:** Playfair Display (serif display), Inter (sans body) via Astro experimental fonts
 
 ## Package Contents
@@ -313,7 +313,7 @@ If you are an AI coding agent generating pages for a user who told you "use the 
 ├── ui_kits/app/                 # Browser-runnable component browser
 │   ├── index.html               # Tabbed component showcase (shadcn patterns)
 │   ├── README.md                # Kit documentation
-│   └── components/              # 14 React-style JSX component files
+│   └── components/              # 17 React-style JSX component files
 │       ├── App.jsx              # App shell
 │       ├── Header.jsx           # Glass header
 │       ├── Sidebar.jsx          # Navigation sidebar

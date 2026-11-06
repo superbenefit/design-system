@@ -8,7 +8,7 @@ This is a Claude Design package reuse guide. It documents the applied kit struct
 ui_kits/app/
 ├── index.html              # Browser entry — React 18 + Babel + colors_and_type.css
 ├── README.md               # This reuse guide
-└── components/             # 14 React+Babel JSX component files (+ App.jsx = 15 total)
+└── components/             # 16 React+Babel JSX component files (+ App.jsx = 17 total)
     ├── App.jsx             # Shell — tabbed component browser with 6 layout configurations
     ├── Avatar.jsx          # Avatar with status indicator (online/away/busy/offline) and initials fallback
     ├── BlogCard.jsx        # Cream card with image, date, title, excerpt, and tags
@@ -91,6 +91,6 @@ Components follow shadcn/ui patterns themed with SuperBenefit brand tokens:
 
 Derived from two primary sources:
 
-1. **SuperBenefit website** (`https://github.com/superbenefit/sb-website`) — Git-clone intake with 40 snapshot files under `context/github/superbenefit-sb-website/files/`. Provides the cream/charcoal/orange palette, Playfair Display + Inter typography, glass card patterns, scroll-driven CSS animations, and the hero/story-card/CTA/page-section layout vocabulary.
+1. **SuperBenefit website** (`https://github.com/superbenefit/sb-website`) — Git-clone intake with 36 snapshot files under `context/github/superbenefit-sb-website/files/`. Provides the cream/charcoal/orange palette, Playfair Display + Inter typography, glass card patterns, scroll-driven CSS animations, and the hero/story-card/CTA/page-section layout vocabulary.
 
 2. **shadcn/ui** (`https://ui.shadcn.com`) — Component architecture and interaction patterns. Accessible, composable primitives themed with SuperBenefit tokens. Provides the focus-ring contract, button/badge/avatar/input sizing conventions, data table patterns with sorting/pagination/selection, and overlay/dialog/tab patterns. Icons follow the lucide style (inline SVGs, no CDN dependency).
